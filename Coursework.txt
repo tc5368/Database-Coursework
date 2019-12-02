@@ -1,0 +1,59 @@
+
+Question 1
+
+SELECT STOCKNO, DESCRIPTION, QUANTITY
+FROM Stocks WHERE QUANTITY > 20
+AND STOCKS.StoreCode = 'CENT'
+ORDER BY Quantity DESC;
+
+-----------------------------------------------
+
+Question 2
+
+SELECT *
+FROM Suppliers
+WHERE Town = 'London'
+Or PostCode LIKE '%NP%';
+
+-----------------------------------------------
+
+Question 3
+
+SELECT StoreCode, count(StockNo)
+FROM Stocks
+Where Price > (SELECT AVG(Price) FROM Stocks)
+GROUP BY StoreCode;
+
+-----------------------------------------------
+
+Question 4
+
+SELECT DISTINCT Town, COUNT(SuppCode)
+FROM Suppliers
+HAVING COUNT(SuppCode) >= 2
+GROUP BY Town
+
+-----------------------------------------------
+
+Question 5
+
+
+
+-----------------------------------------------
+
+Question 6
+
+
+SELECT StoreCode, COUNT(StockNo)
+FROM Stocks
+HAVING COUNT(StockNo) > 5
+GROUP BY StoreCode;
+
+
+-----------------------------------------------
+
+Question 7
+
+
+
+-----------------------------------------------

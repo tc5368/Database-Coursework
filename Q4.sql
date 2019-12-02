@@ -1,0 +1,5 @@
+SELECT DISTINCT Town, COUNT(SuppCode)
+FROM Suppliers
+HAVING COUNT(SuppCode) >= 2
+GROUP BY Town
+/

@@ -1,0 +1,25 @@
+set UNDERLINE =
+
+
+COLUMN StoreCode   FORMAT A10	HEADING 'Store Code'
+COlUMN Description FORMAT A24 HEADING 'Item Description'
+COLUMN Price       HEADING 'Price'
+COLUMN Quantity    HEADING 'Quantity'
+
+
+SELECT TO_CHAR (SYSDATE, 'MM-DD-YYYY HH24:MI:SS') "NOW"
+FROM DUAL;
+
+ttitle center ’Current Stock Value by Store’ skip 2 left -
+’prepared by ’ &Reporting_Officer right - PRINT[NOW];
+
+break on StoreCode skip 2 on SuppCode skip 1 on Report;
+
+select StoreCode, Description, Price, Quantity
+from Stocks
+;
+
+
+
+/*FORMAT A6  HEADING*/
+ /*FORMAT A8  HEADING*/
